@@ -1,5 +1,6 @@
 
-# PAgonist <img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png">
+# PAgonist
+
 <center><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png"></center> 
 
 > **Main Dataset**
