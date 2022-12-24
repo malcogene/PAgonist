@@ -29,7 +29,9 @@ This page provides the supplementary R code and data to reproduce the experiment
 
 > - <font size='2'> highlight content 1 <b>[$y=ax+b+c$](#here)</b></font>  
 \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+
 $$ h(t) = h_0(t) \times exp(b_1x_1 + b_2x_2 + ... + b_px_p) $$
+
 $y=ax+b+c$
 
 
@@ -108,60 +110,6 @@ install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
 ----
 
 
-
-
-<div align="center">
-```{r, echo = FALSE, fig.width=8, fig.cap='Fig. 1', warning = FALSE , message = FALSE, collapse=TRUE }
-source("~/MS/F2.R")
-awViz <- function(proj.title = "test", fontname='Arial', fontsize=14, nodewidth= 4, penwidth=1, arrowsize=1, node.color="darkslateblue", text.color="white", customInput = list(letters[1:9], letters[11:19], c(1:9)), awInput = list(letters[1:9], letters[11:19], c(1:9)), seed=1234, aw=ranseq(awInput, "random", seed=seed), awCol=as.list(sample( .col("workflow")(6), 6))) {
-require(DiagrammeR);
-gvvar  <- list()
-gvvar['basic.par'][[1]] = c(fontname=fontname, fontsize=fontsize, nodewidth= nodewidth, penwidth=penwidth, arrowsize=arrowsize, node.color=node.color, text.color=text.color)
-gvvar['customInput'][[1]] = customInput
-gvvar['awInput'][[1]] = awInput
-gvvar['awCol'][[1]] = awCol
-gvvar <<- gvvar
-  
-graph <- grViz( diagram <- "digraph example {
-graph [fontname=@@1-1, nodesep = .3, ranksep = .5, rankdir=LR, splines=ortho, compound=true, label='', labelloc=t, labeljust=left, fontsize=30, fontcolor=darkslateblue, layout = dot] # concentrate=false, fontname='Helvetica Bold', layout = dot
-node [fontname = @@1-1, fontcolor=@@1-7, shape = rectangle, style=filled, color=@@1-6, fontsize = @@1-2, width=@@1-3, height = .7, margin = '0.3, 0.16', fixedsize=TRUE] 
-edge [fontname = @@1-1,  fontcolor=@@1-7, color = '#00000090', dir = both, arrowtail = none, arrowsize = @@1-5, fontsize=@@1-2, penwidth=@@1-4, style='dashed']
-                  
-############## EDIT ====                
-subgraph cluster0 {color='#00000010'; style='filled'; fillcolor= '#00000010'; penwidth=@@1-4; margin=0; label='Pathway Dysregulation Score'; labelloc= 't'; labeljust=l; fontname=@@1-1; fontsize=14; fontcolor='#000000';
-sub0[margin = '0, 0', width=1, fixedsize=FALSE, label=<<table width='100%' bgcolor='#00000030' cellborder='0' cellspacing='0' cellpadding='10'> 
-<TR> <TD BALIGN='LEFT' BGCOLOR='#000000'> Pathifier <br/>PathTacerIPS___________ </TD><TD BALIGN='LEFT' BGCOLOR='#00000030'> Pathifier<br/>PathTacerIPS  </TD></TR> 
-<TR> <TD BALIGN='LEFT' BGCOLOR='#00000030'> Pathifier <br/>PathTacerIPS___________ </TD><TD BALIGN='LEFT' BGCOLOR='#000000'> Pathifier<br/>PathTacerIPS  </TD></TR>  
-<TR> <TD BALIGN='LEFT' BGCOLOR='#000000'> Pathifier <br/>PathTacerIPS___________ </TD><TD BALIGN='LEFT' BGCOLOR='#00000030'> Pathifier<br/>PathTacerIPS  </TD></TR>  
-</table>> ]   }
-
-'Meta-analysis'[width=1.5,shape=circle,peripheries=4] 'Meta-analysis'->'ML module'
-'Pathway-modules'[width=1.5,shape=circle,peripheries=4] 'Pathway-modules'-> sub0:nw->'ML module':nw [style=vis, lhead = cluster0, ltail = cluster0, weight=1]
-                  
-{rank=same;'Meta-analysis' -> 'Pathway construction (unsupervised)' ->'Pathway-modules'   'Meta-analysis' -> 'Pathway construction (supervised)' ->'Pathway-modules'} 
-{rank=same; a[color='#FFFFFF', fontcolor=black, height=.3,label='Features (genes)'] a->'Meta-analysis'} 
-{rank=same;'Evaluation'->'Additional Analysis'}
-{rank=same;'ML module'-> 'Evaluation'[constraint=true]  }
-                  
- ############## EDIT END ==== 
-                  
-# a[label='@@1-3'] p[shape=point, width=0] a->p[dir=none] p->b[style='dashed'] p->ESR
-# gg0 [group=e1, label = 'gg0 label']  # gg0 -> {gg1 gg2}   # ub3l:se-> End:w [weight=2]
-# gg1 [label = 'gg1 label\\l <b>.....</b>\\r', fillcolor = pink ]
-# edge [color = grey, style=vis, minlen=2, constraint = true ] # invis
-# { rank = same; gg1 -> gg2 [label='edge labe bra']} # node align : 1.rank: horizonal > Group (vertical로 노드에 group=e2 등으로...) > weight (edge에 weight=2...) 
-}
-[1]: gvvar['basic.par'][[1]] # list도 상관없음.
-[2]: gvvar['customInput'][[1]]
-[3]: gvvar['awInput'][[1]]
-[4]: gvvar['awCol'][[1]]
-")
-graph
-   }
-awViz()
-
-```
-</div>
 
 
 <br><br><br>
