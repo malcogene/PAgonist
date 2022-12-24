@@ -22,6 +22,7 @@ The primary method of analysis in estimating the regression coefficients is call
 
 
 $$ L(\beta) = \prod_{i=1}^{n} \Bigg\lbrace\frac{\exp(\beta x_i)}{\sum_{j \in R(t_i)}\exp(\beta x_j)}\Bigg\rbrace$$
+
 where the $R(t_i)$ is the set of subjects still at risk at time $t_i$. Maximum likelihood methods attempt to find the  $\beta$ values that maximize this likelihood, that is, the regression parameters that yield the maximum joint probability of observing the set of failure times with the associated set of covariate values. Because this likelihood ignores any assumptions made about the baseline hazard function, it is actually a partial likelihood, not a full likelihood, but the resulting  have the same distributional properties as those derived from the full likelihood.
 
 
