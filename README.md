@@ -14,7 +14,7 @@ output:
 This page provides the supplementary R code and data to reproduce the experiments in the following paper : **Accurate prediction of acquired EGFR TKIs resistance using a pathway-based individualized machine learning approach**  
 -->
 
-> - <font size='2'> highlight content 1 <b>[ $y=ax+b+c$ ](#here)</b></font> 
+> - $y=ax+b+c$ (#here)
 
 $$ h(t) = h_0(t) \times exp(b_1x_1 + b_2x_2 + ... + b_px_p) $$
 
