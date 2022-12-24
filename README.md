@@ -1,7 +1,7 @@
 
 # PAgonist
 
-<p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png"></p> 
+<p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png" alt="Flowers in Chania" style="width:500px;height:600px;"></p> 
 
 > **Main Dataset**
 
