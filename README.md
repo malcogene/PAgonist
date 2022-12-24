@@ -21,7 +21,7 @@ This page provides the supplementary R code and data to reproduce the experiment
 
 $$ h(t) = h_0(t) \times exp(b_1x_1 + b_2x_2 + ... + b_px_p) $$
 
-$y=ax+b+c$
+$y=ax+b+c$ hkhjkhkhk
 
 
 ----
