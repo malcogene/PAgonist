@@ -1,19 +1,6 @@
 # PAgonist
 
-<br>
----
-title: "<center> RClass </center> "
-author: 
-  - name: "<center> Sung Young Kim, MD, PhD^1^</center>"
-    affiliation: "<center> ^1^Department of Biochemistry, School of Medicine, Konkuk University</center> "
-output: 
-    html_document:
-        toc: false  
-        toc_float: 
-           collapsed: false
-        toc_depth: 3
-        mathjax: https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
----
+
 <!--   주석처리  toc:table of content, html은 각 타이틀 >, md는 ##로 하는 것이 보기좋음    
 author: "Sung Young Kim, MD, PhD^[mailto:palelamp@gmail.com]</center>"
 date: "`r format(Sys.time(), '%d %B %Y')`"
@@ -27,7 +14,9 @@ output:
 This page provides the supplementary R code and data to reproduce the experiments in the following paper : **Accurate prediction of acquired EGFR TKIs resistance using a pathway-based individualized machine learning approach**  
 -->
 
-> - <font size='2'> highlight content 1 <b>[$y=ax+b+c$](#here)</b></font>  
+> - <font size='2'> highlight content 1 <b>[
+> $y=ax+b+c$
+> ](#here)</b></font>  
 \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
 
 $$ h(t) = h_0(t) \times exp(b_1x_1 + b_2x_2 + ... + b_px_p) $$
