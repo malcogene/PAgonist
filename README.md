@@ -1,42 +1,41 @@
 # PAgonist
 
 <br>
+---
+title: "<center> RClass </center> "
+author: 
+  - name: "<center> Sung Young Kim, MD, PhD^1^</center>"
+    affiliation: "<center> ^1^Department of Biochemistry, School of Medicine, Konkuk University</center> "
+output: 
+    html_document:
+        toc: false  
+        toc_float: 
+           collapsed: false
+        toc_depth: 3
+        mathjax: https://d3eoax9i5htok0.cloudfront.net/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+---
+<!--   주석처리  toc:table of content, html은 각 타이틀 >, md는 ##로 하는 것이 보기좋음    
+author: "Sung Young Kim, MD, PhD^[mailto:palelamp@gmail.com]</center>"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 
-<p align=center style="color:black;font-size:30px;"><b>   survACC   </b></p>
-<!--   <p align=center><i>Sung Young Kim, MD, PhD<sup>1</sup> <sup>1</sup>Department of Biochemistry, School of Medicine, Konkuk University </i></p>   -->
-`code` _italic_ ___bolditalic___ __[boldlink](https://www.markdownguide.org/basic-syntax/)__<br><br>     this is a 2 space. ~Just~ ~~copy~~ &<sup>paste</sup><br><hr><hr style="border:1px solid black"> 
-<center><img src="https://www.online-image-editor.com/styles/2014/images/example_image.png"></center>
-<!--   github md는 math 지원안됨. github에서는 간단하게 하는게 정신건강에 좋음   -->
+output: 
+    md_document:
+        variant: markdown_github     # GitHub Flavored Markdown   github md는 mathjax 안됨
+-->
 
-#### __Predicted probabilities from Cox regression model__
-### _Estimating the Regression Coefficients_
-<hr>
-Adjusted survival curve: look like original KM curve, but is not exactly same  because you control the another variable.
+<!--
+This page provides the supplementary R code and data to reproduce the experiments in the following paper : **Accurate prediction of acquired EGFR TKIs resistance using a pathway-based individualized machine learning approach**  
+-->
 
-The Cox proportional-hazards model (Cox, 1972) is essentially a regression model that specifies the conditional hazard function of the event time for a given set of covariates. The hazard function is defined by
-$$h(t|X_i)=h_0(t) \exp(\beta_1x_{i1}+\cdots +\beta_px_{ip})=h_0(t)\exp (\beta^T X_i)$$
-where $X_i=(x_{i1}, \cdots, x_{ip})^T$ a p-dimensional vector of covariates associated with patient i is, $\beta=(\beta_{1}, \cdots, \beta_{i})^T$ is the vector of regression coefficients and $h_0(t)$ is the baseline hazard function. 
-
-##### Estimating the Regression Coefficients
-The primary method of analysis in estimating the regression coefficients is called partial likelihood method. 
+> - <font size='2'> highlight content 1 <b>[$y=ax+b+c$](#here)</b></font>  
+\\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\]
+$$ h(t) = h_0(t) \times exp(b_1x_1 + b_2x_2 + ... + b_px_p) $$
+$y=ax+b+c$
 
 
-$$ L(\beta) = \prod_{i=1}^{n} \Bigg\lbrace\frac{\exp(\beta x_i)}{\sum_{j \in R(t_i)}\exp(\beta x_j)}\Bigg\rbrace$$
+----
 
-where the $R(t_i)$ is the set of subjects still at risk at time $t_i$. Maximum likelihood methods attempt to find the  $\beta$ values that maximize this likelihood, that is, the regression parameters that yield the maximum joint probability of observing the set of failure times with the associated set of covariate values. Because this likelihood ignores any assumptions made about the baseline hazard function, it is actually a partial likelihood, not a full likelihood, but the resulting  have the same distributional properties as those derived from the full likelihood.
-
-
-
-
-
-
-
-
-
-
-```{r ref, eval = FALSE, include = FALSE }
-
-__Main Dataset__
+> **Main Dataset**
 
 * The main method function R file can be downloaded from [here](http://centromics.org/info/142sup/mainFunctions.R)
 * Preprocessed dataset can be downloaded from [here](http://centromics.org/info/142sup/EGFRTKIs_8set.RData)
@@ -44,43 +43,42 @@ __Main Dataset__
 
 ----
 
-__Package Download__
+> **Package Download**
 
 * Package source file can be downloaded from [here](http://centromics.org/info/142sup/mainFunctions.R)
 
 
 ----
 
-__Install Dependencies__
+> **Install Dependencies**
 
-> * If don't have the R software installed in our computer, download and install it (check out the [R home page](http://www.r-project.org/))
+* If don't have the R software installed in our computer, download and install it (check out the [R home page](http://www.r-project.org/))
 * Open the R command line interface, and install package dependencies (if they have not been installed yet):
 * Dependencies: R (>= 3.0.0), shiny (>= 0.8.0), WGCNA, igraph, shinyBS, RColorBrewer, Hmisc, psych, RJSONIO, whisker, yaml, pheatmap, preprocessCore, GO.db, AnnotationDbi, impute, and ggplot2
 
 
-#```{r eval = FALSE}
+```{r eval = FALSE}
 if (!requireNamespace("BiocManager", quietly = T)) install.packages("BiocManager")
 BiocManager::install("limma")
 BiocManager::install("ComplexHeatmap")
 install.packages(c("ggplot2", "ggrepel", "WGCNA", "igraph", "Hmisc"))
-#```
+```
 * Please, install versions 0.8.0 for shiny. <!--We are working to make the package compatible with the new versions of the packages as soon as possible.--> To install the recommended versions for shiny, just type the following commands on the R command-line:
-#```{r eval = FALSE}
+```{r eval = FALSE}
 if (!require("devtools")) install.packages("devtools")
 devtools::install_version("shiny", "0.8.0")
-#```
+```
 
 
 ----
 
 
-
->  __Install package via Github (Recommended)__
+> **Install package via Github (Recommended)**
 
 To install the latest version of package via Github, run following commands in R:
-#```{r eval = FALSE}
+```{r eval = FALSE}
 devtools::install_github("malcogene/RClass")
-#```
+```
 
 
 
@@ -92,9 +90,9 @@ devtools::install_github("malcogene/RClass")
 - **Linux/Mac OS**
     - Download the package *.tar.gz.
     - Open a command prompt. then:
-#```{r eval = FALSE}
+```{r eval = FALSE}
 install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
-#```
+```
 
 
 - **Windows**
@@ -102,16 +100,18 @@ install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
     - Download the package *.tar.gz.
     - Make sure you have [Rtools](https://cran.r-project.org/bin/windows/Rtools/) installed.
     - Open a command prompt. then:
-#```{r eval = FALSE}
+```{r eval = FALSE}
 install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
-#```
+```
 
 
 ----
 
 
+
+
 <div align="center">
-#```{r, echo = FALSE, fig.width=8, fig.cap='Fig. 1', warning = FALSE , message = FALSE, collapse=TRUE }
+```{r, echo = FALSE, fig.width=8, fig.cap='Fig. 1', warning = FALSE , message = FALSE, collapse=TRUE }
 source("~/MS/F2.R")
 awViz <- function(proj.title = "test", fontname='Arial', fontsize=14, nodewidth= 4, penwidth=1, arrowsize=1, node.color="darkslateblue", text.color="white", customInput = list(letters[1:9], letters[11:19], c(1:9)), awInput = list(letters[1:9], letters[11:19], c(1:9)), seed=1234, aw=ranseq(awInput, "random", seed=seed), awCol=as.list(sample( .col("workflow")(6), 6))) {
 require(DiagrammeR);
@@ -160,23 +160,19 @@ graph
    }
 awViz()
 
-#```
+```
 </div>
+
 
 <br><br><br>
 <div class="container3"> <div class="child">
-#```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE}
+```{r echo=FALSE, fig.align='center', message=FALSE, warning=FALSE}
 require(ReporteRs)
 data(mtcars)
 .table(mtcars)
 
-#```
-</div></div><br><br>
-
-
-
 ```
-
+</div></div><br><br>
 
 
 
@@ -221,7 +217,7 @@ div.shadow {
 </style>
 
 
-<!--
+
 <br><br>
 <center><div class="container1"><iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/vPEa0gNlxNI?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"></iframe></div></center> 
 <br><br>
@@ -230,4 +226,3 @@ div.shadow {
 <br><br>
 <center><div class="shadow"><img src="https://unsplash.it/600.jpg?image=251"></div></center> 
 <br><br>
--->
