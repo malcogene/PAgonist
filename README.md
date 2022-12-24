@@ -1,7 +1,7 @@
 
 # PAgonist
 
-<center><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png"></center> 
+<p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/faviconCentro10.png"></p> 
 
 > **Main Dataset**
 
