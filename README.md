@@ -76,13 +76,12 @@ install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
 
 ----
 <br>
-Our analysis starts with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set  $\operatorname{tg}$  by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
+Our analysis starts with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set 
+$\operatorname{tg}$  by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
 
 
-$S_{u p}$ 
-for the upregulated genes in the target gene set and 
-$S_{\text {down }}$ 
-for the downregulated genes and are later combined to produce the composite connectivity score, 
+$S_{u p}$ for the upregulated genes in the target gene set and 
+$S_{\text {down }}$ for the downregulated genes and are later combined to produce the composite connectivity score, 
 $S_{\text {total }}$.
 
 $b g=$ ranked background gene set (rankedNamedVec)
@@ -113,7 +112,9 @@ $$
 S_{i}=S_{H i t, i}-S_{\text {Miss, } i}=\frac{\sum_{0}^{i} R_{b g, t g} \mid}{\Sigma\left|R_{b g, t g}\right|}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)
 $$
 
-In order to prioritize drugs that concordantly reverse the diseased profile with minimal side effects? Unwanted/unforeseen consequences?, we multiply a discordant constant $D$ to the score. $D$ shows how unified the direction of the drug-driven "hits" is. Ideally, a drug will upregulate genes that are decreased in the diseased state and vice versa, in which case $D$ will equal to 1 and have no effect on the score. Depending on the sign of the maximum score, we adjust the scores by varying the value of $D$. In cases when the maximum score is positive, which indicates that the target gene set contains downregulated genes and the drug induces a tendency towards upregulation, downregulation of genes represent an unwanted byproduct. Considering that overexpressing genes with drugs is especially difficult, the downregulation of genes that are already downregulated by the disease is highly undesirable, which we penalize with a penalty $p$. In cases when the maximum score is negative, which indicates that target gene set contains upregulated genes and the drug induces a tendency towards downregulation,
+In order to prioritize drugs that concordantly reverse the diseased profile with minimal unwanted effects, we multiply a discordant constant 
+$D$ 
+to the score. $D$ shows how unified the direction of the drug-driven "hits" is. Ideally, a drug will upregulate genes that are decreased in the diseased state and vice versa, in which case $D$ will equal to 1 and have no effect on the score. Depending on the sign of the maximum score, we adjust the scores by varying the value of $D$. In cases when the maximum score is positive, which indicates that the target gene set contains downregulated genes and the drug induces a tendency towards upregulation, downregulation of genes represent an unwanted byproduct. Considering that overexpressing genes with drugs is especially difficult, the downregulation of genes that are already downregulated by the disease is highly undesirable, which we penalize with a penalty $p$. In cases when the maximum score is negative, which indicates that target gene set contains upregulated genes and the drug induces a tendency towards downregulation,
 
 $$
 \begin{aligned}
