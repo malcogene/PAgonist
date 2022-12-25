@@ -2,12 +2,7 @@ Package: PAgonist
 Title: .
 Version: 0.0.0.9
 Author: Sung Young Kim
-Description: ... takes as input several lists of... genes. ...then 
-        searches through a compendium of...
-        publicly available gene expression profiles for biological
-        contexts that are enriched with a specified pattern of gene
-        expression. ... provides both traditional R functions and
-        interactive, user-friendly user interface.
+Description: ... 
 Depends: R (>= 3.6.3)
 License: MIT
 Encoding: UTF-8
