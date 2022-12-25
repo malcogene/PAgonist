@@ -1,0 +1,18 @@
+Package: PAgonist
+Title: .
+Version: 0.0.0.9
+Author: Sung Young Kim
+Description: ... takes as input several lists of... genes. ...then 
+        searches through a compendium of...
+        publicly available gene expression profiles for biological
+        contexts that are enriched with a specified pattern of gene
+        expression. ... provides both traditional R functions and
+        interactive, user-friendly user interface.
+Depends: R (>= 3.6.3)
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports: shiny (>= 1.5.0), ggplot2 (>= 3.3.5), ggrepel(>= 1.9.1), reshape2 (>= 1.4.4)
+Suggests: Affyhgu133aExpr, Affymoe4302Expr, Affyhgu133A2Expr, Affyhgu133Plus2Expr  
