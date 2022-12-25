@@ -76,9 +76,6 @@ install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
 
 ----
 <br>
-Our analysis starts
-$N_{b g}=$ with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set 
-$\operatorname{tg}$  by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
 
 $S_{u p}$ for the upregulated genes in the target gene set and $S_{\text {down }}$ for the downregulated genes and are later combined to produce the composite connectivity score, 
 $S_{\text {total }}$
@@ -90,6 +87,10 @@ $R_{b g, t g}=$ the rank of a gene found in the background gene set and the targ
 $p=$ penalty value determined by the user
 $e C D F_{H i t, i}=\frac{\sum_{0}^{i} \left|R_{b g, t g}\right|}{\Sigma\left|R_{b g, t g}\right|}$ 
 cumulative sum of the ranks of 'hit' genes found in between and leading up to gene i divided by the total sum of the ranks of all 'hit' genes
+Our analysis starts
+$N_{b g}=$ with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set 
+$\operatorname{tg}$  by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
+
 
 $e C D F_{\text {Miss }, j}=\frac{1}{N_{b g}-N_{t g}}{ }^{*}\left(N_{b g}-N_{t g, j}\right)$ 
 cumulative sum of the number of 'miss' genes found in between and leading up to gene 
