@@ -88,11 +88,10 @@ $R_{b g, t g}=$ the rank of a gene found in the background gene set and the targ
 $p=$ penalty value determined by the user
 
 
-$$  ds_{dsd}=\sum_a^b x 
-e C D F_{H i t, i}=\sum_{a}^{b} \frac{1}{\sum_a^b x }
+$$ds_{dsd}=\sum_a^b x 
+e C D F_{H i t, i}=\sum_{a}^{b} \frac{1}{\sum_a^b x}
 e C D F_{H i t, i}=\frac{\sum_{i}^{n} \left|R_{b g, t g}\right|}{dsf} 
-
- \frac{\sum_a^b x }{\partial x^n}  $$
+d= \frac{\sum_a^b x }{\partial x^n}$$
 
 $e C D F_{H i t, i}=\frac{\sum_{i}^{n} \left|R_{b g, t g}\right|}{\Sigma\left|R_{b g, t g}\right|}$ 
 cumulative sum of the ranks of 'hit' genes found in between and leading up to gene i divided by the total sum of the ranks of all 'hit' genes
