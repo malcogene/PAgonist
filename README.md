@@ -76,7 +76,9 @@ install.packages(path_of_the_downloaded_file, repos = NULL, type="source")
 
 ----
 <br>
-Our analysis starts with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set $\operatorname{tg}$ by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
+Our analysis starts with determining the connectivities between the gene expression profiles of ranked background gene set $b g$ and the target gene set  $\operatorname{tg}$  by calculating the Kolmogorov-Smirnoff (K-S) statistic score from the hit and miss scores, which represent the cumulative sum of the ranks of genes that do or do not, respectively, appear in both of the two gene sets. Initially, two K-S scores are calculated, 
+
+
 $S_{u p}$ 
 for the upregulated genes in the target gene set and 
 $S_{\text {down }}$ 
