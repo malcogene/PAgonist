@@ -1,8 +1,7 @@
 
 <p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/pagonist.png" style="width:150px;"></p> 
 
-<!--      https://www.ime.usp.br/~suzana/coga/download.html#download
-      http://lpantano.github.io/DEGreport/ 패키지 만들 때 참조 --> 
+
 # PAgonist
 
 > **Main Dataset**
