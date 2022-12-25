@@ -86,7 +86,13 @@ $N_{b g}=$ length of the background gene set
 $N_{t g}=$ length of the target gene set
 $R_{b g, t g}=$ the rank of a gene found in the background gene set and the target gene set $E S=$ running sum of enrichment score
 $p=$ penalty value determined by the user
-$e C D F_{H i t, i}=\frac{\sum_{i=0}^{n} \left|R_{b g, t g}\right|}{\Sigma\left|R_{b g, t g}\right|}$ 
+
+
+$$ ds_{dsd}=\sum_a^b x 
+e C D F_{H i t, i}=\frac{\sum_{a}^{b} \left|R_{b g, t g}\right|}{t}
+e C D F_{H i t, i}=\frac{\sum_{i}^{n} \left|R_{b g, t g}\right|}{dsf} $$
+
+$e C D F_{H i t, i}=\frac{\sum_{i}^{n} \left|R_{b g, t g}\right|}{\Sigma\left|R_{b g, t g}\right|}$ 
 cumulative sum of the ranks of 'hit' genes found in between and leading up to gene i divided by the total sum of the ranks of all 'hit' genes
 
 $e C D F_{\text {Miss }, j}=\frac{1}{N_{b g}-N_{t g}}{ }^{*}\left(N_{b g}-N_{t g, j}\right)$ 
