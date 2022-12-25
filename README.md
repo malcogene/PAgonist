@@ -46,7 +46,7 @@ devtools::install_version("shiny", "0.8.0")
 
 To install the latest version of package via Github, run following commands in R:
 ```{r eval = FALSE}
-devtools::install_github("malcogene/RClass")
+devtools::install_github("malcogene/PAgonist")
 ```
 
 
