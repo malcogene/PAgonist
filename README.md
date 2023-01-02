@@ -113,6 +113,7 @@ The significance of the total score is evaluated through a permutation test.
 $$
 H_{0}: S=S_{\text {total}} 
 $$
+
 $$
 P=\sum_{0}^{N}(|S|>|S_{total}|)*N^{-1}
 $$
