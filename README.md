@@ -100,7 +100,7 @@ $$
 In order to prioritize drugs that concordantly reverse the diseased profile with minimal unwanted consequences, we multiply a discordant constant $D$ to the score. $D$ shows how unified the direction of the drug-driven "hits" is. Ideally, a drug will upregulate genes that are decreased in the diseased state and vice versa, in which case $D$ will equal to 1 and have no effect on the score. Depending on the sign of the maximum score, we adjust the scores by varying the value of $D$. In cases when the maximum score is positive, which indicates that the target gene set contains downregulated genes and the drug induces a tendency towards upregulation, downregulation of genes represent an unwanted byproduct. Considering that overexpressing genes with drugs is especially difficult, the downregulation of genes that are already downregulated by the disease is highly undesirable, which we penalize with a penalty $p$. In cases when the maximum score is negative, which indicates that target gene set contains upregulated genes and the drug induces a tendency towards downregulation,
 
 $$
-D=\frac{1}{2}*\left(1+\left\left(\sum R_{bg, tg}
+D=\frac{1}{2}*\left(1+\leftC\left(\sum R_{bg, tg}
 $$
 $$
 \mid\left(R_{bg, t g}>0\right)\right)-\left(\sum R_{bg, tg} \mid\left(R_{bg, tg}<0\right)\right) \left(\Sigma\left|R_{bg, tg}\right|\right)^{-1}\right)
