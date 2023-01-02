@@ -107,6 +107,7 @@ $$
 
 $$
 S_{i, a d j}=  \left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad  \text { if } S_{i, \max }>0 
+
 \ \ \ \ \ \ \left(\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)*(1-D) \quad \text { if } S_{i, \max }<0
 $$
 
