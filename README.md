@@ -80,9 +80,9 @@ $N_{t g}=$ number of the target gene set
 $R_{b g, t g}=\left(r_{b g, t g}\right)^{s}$ gene expression profile found in the background genes and the target gene set, where An exponent $s$ to control the weight of $r_{b g, t g}$
 $p=$ penalty value determined by the user
 
-$e C D F_{H i t, i}=\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}$ cumulative sum of the ranks of 'hit' genes found in between and leading up to gene i divided by the total sum of the ranks of all 'hit' genes
+$eCDF_{Hit, i}=\sum_{0}^{i}\left|R_{bg, tg}\right| *\left(\Sigma\left|R_{bg, tg}\right|\right)^{-1}$ cumulative sum of the ranks of 'hit' genes found in between and leading up to gene i divided by the total sum of the ranks of all 'hit' genes
 
-$e C D F_{\text {Miss, } i}=\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, j}\right)$ cumulative sum of the number of 'miss' genes found in between and leading up to gene $\mathrm{j}$ divided by the total sum of the number of all 'miss' genes
+$eCDF_{\text {Miss, } i}=\frac{1}{N_{bg}-N_{tg}} *\left(N_{bg}-N_{tg, j}\right)$ cumulative sum of the number of 'miss' genes found in between and leading up to gene $\mathrm{j}$ divided by the total sum of the number of all 'miss' genes
 
 The ‘hit’ and ‘miss’ scores are then subtracted to calculate $S_{i}$, the total cumulative score for the ranked genes including and leading up to gene $i$.
 
