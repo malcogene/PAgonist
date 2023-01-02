@@ -75,7 +75,7 @@ Our analysis first starts with determining the connectivities between the gene e
 
 $bg={g_{1}, g_{2} ..., g_{n}}$, the ranked background gene set of the $N$ genes and $r_{bg}=r\left(g_{j}\right)$, of their expression profiles associated with a target phenotype.
 
-$\operatorname{tg}=$ the target gene set
+$tg=$ the target gene set
 
 $N_{b g}=$ number of the background gene set
 
