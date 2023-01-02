@@ -113,11 +113,6 @@ $$
 \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \left(\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{bg}-N_{tg, i}\right)\right)*\left(1-D\right) \quad  \text { if } S_{i, \max }<0
 $$
 
-$$
-\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)*\left(1-D\right) \quad  \text { if } S_{i, \max }<0
-$$
-
-
 
 The total score is obtained by calculating and subtracting the individual scores for the upregulated and downregulated target gene sets, where the score with the absolute maximum value is selected and adjusted by the process above.
 
