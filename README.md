@@ -108,16 +108,10 @@ S_{i, a d j}=\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left
 $$
 
 $$
-\left.\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{*}(1-D) \quad \text { if } S_{i, \max }<0
+S_{i, a d j}=  \begin{cases}\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad  & \text { if } S_{i, \max }>0 \\
+\left(\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)*(1-D) \quad  & \text { if } S_{i, \max }<0\end{cases} 
 $$
 
-
-$$
-\begin{aligned}
-& \text { if } S_{i, \max }>0 \\
-& \text { if } S_{i, \max }<0
-\end{aligned}
-$$
 
 The total score is obtained by calculating and subtracting the individual scores for the upregulated and downregulated target gene sets, where the score with the absolute maximum value is selected and adjusted by the process above.
 
