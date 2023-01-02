@@ -4,14 +4,6 @@
 
 # PAgonist
 
-> **Main Dataset**
-
-* The main method function R file can be downloaded from [here](http://centromics.org/info/142sup/mainFunctions.R)
-* Preprocessed dataset can be downloaded from [here](http://centromics.org/info/142sup/EGFRTKIs_8set.RData)
-* The pathways used for model construction can be downloaded from [here](http://centromics.org/info/142sup/p.KEGG.PID.BioCarta.RData)
-
----
-
 > **Package Download**
 
 * Package source file can be downloaded from [here](http://centromics.org/info/142sup/mainFunctions.R)
