@@ -4,13 +4,6 @@
 
 # PAgonist
 
-> **Package Download**
-
-* Package source file can be downloaded from [here](http://centromics.org/info/142sup/mainFunctions.R)
-
-
-----
-
 > **Install Dependencies**
 
 * If don't have the R software installed in our computer, download and install it (check out the [R home page](http://www.r-project.org/))
@@ -21,8 +14,7 @@
 ```{r eval = FALSE}
 if (!requireNamespace("BiocManager", quietly = T)) install.packages("BiocManager")
 BiocManager::install("limma")
-BiocManager::install("ComplexHeatmap")
-install.packages(c("ggplot2", "ggrepel", "WGCNA", "igraph", "Hmisc"))
+install.packages(c("ggplot2", "ggrepel"))
 ```
 * Please, install versions 0.8.0 for shiny. <!--We are working to make the package compatible with the new versions of the packages as soon as possible.--> To install the recommended versions for shiny, just type the following commands on the R command-line:
 ```{r eval = FALSE}
@@ -44,6 +36,16 @@ devtools::install_github("malcogene/PAgonist")
 
 
 ----
+
+
+> **Package Download**
+
+* Package source file can be downloaded from [here](https://raw.githubusercontent.com/malcogene/PAgonist/main/R/pagonist.R)
+
+
+----
+
+
 
 
 > **Install package from the source**
