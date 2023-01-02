@@ -100,8 +100,11 @@ $$
 In order to prioritize drugs that concordantly reverse the diseased profile with minimal unwanted consequences, we multiply a discordant constant $D$ to the score. $D$ shows how unified the direction of the drug-driven "hits" is. Ideally, a drug will upregulate genes that are decreased in the diseased state and vice versa, in which case $D$ will equal to 1 and have no effect on the score. Depending on the sign of the maximum score, we adjust the scores by varying the value of $D$. In cases when the maximum score is positive, which indicates that the target gene set contains downregulated genes and the drug induces a tendency towards upregulation, downregulation of genes represent an unwanted byproduct. Considering that overexpressing genes with drugs is especially difficult, the downregulation of genes that are already downregulated by the disease is highly undesirable, which we penalize with a penalty $p$. In cases when the maximum score is negative, which indicates that target gene set contains upregulated genes and the drug induces a tendency towards downregulation,
 
 $$
-D=\frac{1}{2} *\left(1+\left(\sum R_{b g, t g} \mid\left(R_{b g, t g}>0\right)\right)-\left(\sum R_{b g, t g} \mid\left(R_{b g, t g}<0\right)\right)^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}\right) \\
-S_{i, a d j}=\left[\quad\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad \text { if } S_{i, \max }>0\right. \\
+D=\frac{1}{2} *\left(1+\left(\sum R_{b g, t g} \mid\left(R_{b g, t g}>0\right)\right)-\left(\sum R_{b g, t g} \mid\left(R_{b g, t g}<0\right)\right)^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}\right) 
+$$
+
+$$
+S_{i, a d j}=\left[\quad\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad \text { if } S_{i, \max }>0\right.
 \left.\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{*}(1-D) \quad \text { if } S_{i, \max }<0
 $$
 
