@@ -117,9 +117,8 @@ P=\frac{\sum_{0}^{N}\left(|S|>\left|S_{\text {total }}\right|\right)}{N}
 \end{gathered}
 $$
 
-\section{Analysis/treatment? of Unwanted Effects}
 
-We further analyze the genes involved in drug's unwanted effects through overrepresentation analysis (ORA), where we calculate the p-value through a hypergeometric distribution. By identifying genes that are overrepresented in this group, we can explore ways to address them, either with another round of _'name of our method'_ to discover a supplementary drug to eliminate the unwanted effects or a pathway enrichment analysis to investigate how these unwanted genes may function.
+We further analyze the genes involved in drug's unwanted effects through overrepresentation analysis (ORA), where we calculate the p-value through a hypergeometric distribution. By identifying genes that are overrepresented in this group, we can explore ways to address them, either with another round of enrichment analysis to discover a supplementary drug to eliminate the unwanted effects or a pathway enrichment analysis to investigate how these unwanted genes may function.
 
 $$
 P(X \geq x)=1-P(X \leq x-1)=1-\sum_{i=0}^{x-1} \frac{\left(\begin{array}{l}
