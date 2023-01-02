@@ -1,5 +1,5 @@
 
-<p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/pagonist.png" style="width:150px;"></p> 
+<p align="center"><img src="https://raw.githubusercontent.com/malcogene/Tmp/master/img/PAgonist.png" style="width:150px;"></p> 
 <!--... -->
 
 # PAgonist
