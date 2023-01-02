@@ -104,7 +104,7 @@ D=\frac{1}{2}\left(1+\left(\sum R_{bg, tg}\mid\left(R_{bg, t g}>0\right)\right)-
 $$
 
 $$
-S_{i, a d j}=\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad \text { if } S_{i, \max }>0\right)
+S_{i, a d j}=\left(\sum_{0}^{i}\left|R_{b g, t g}\right|{ }^{*}\left(\Sigma\left|R_{b g, t g}\right|\right)^{-1}-\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)\right)^{p} \quad \text { if } S_{i, \max }>0
 $$
 
 $$
