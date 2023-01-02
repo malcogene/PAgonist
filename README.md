@@ -84,8 +84,8 @@ $e C D F_{H i t, i}=\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma\left|R_{
 
 $e C D F_{\text {Miss, } i}=\frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, j}\right)$ cumulative sum of the number of 'miss' genes found in between and leading up to gene $\mathrm{j}$ divided by the total sum of the number of all 'miss' genes
 
-![](https://cdn.mathpix.com/cropped/2023_01_02_ffb6d0b9213a0a41ed5dg-1.jpg?height=67&width=1607&top_left_y=1834&top_left_x=237)
-ranked genes including and leading up to gene i.
+The ‘hit’ and ‘miss’ scores are then subtracted to calculate $S_{i}$, the total cumulative score for the ranked genes including and leading up to gene $i$.
+
 
 $$
 S_{i}=S_{H i t, i}-S_{M i s s, i}=\sum_{0}^{i}\left|R_{b g, t g}\right| *\left(\Sigma \mid R_{b g, t g}\right)^{-1} \frac{1}{N_{b g}-N_{t g}} *\left(N_{b g}-N_{t g, i}\right)
